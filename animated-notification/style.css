@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,400&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+.container-wrapper {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+}
+
+.container-wrapper .fa-brands {
+   font-size: 80px;
+   color: rgb(0, 178, 255);
+}
+
+.container-wrapper .notify::before {
+   position: absolute;
+   content: attr(data-count);
+   top: -15px;
+   right: -15px;
+   font-size: 30px;
+   font-weight: bold;
+   color: #fff;
+   padding: 5px 12px;
+   background: linear-gradient(#ff1a1a, #ff0000, #e60000);
+   line-height: 100%;
+   border-radius: 50px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   opacity: 0;
+   transition: opacity 0.1s ease-in-out;
+   animation: animate 0.9s ease-out infinite alternate;
+}
+
+@keyframes animate {
+   0% {
+      transform: scale(1);
+   }
+   100% {
+      transform: scale(1.09);
+   }
+}
+
+.notify.add-numb::before {
+   opacity: 1;
+}
+
+.container-wrapper .btn {
+   position: absolute;
+   left: -25px;
+   top: 100px;
+   width: 120px;
+}
