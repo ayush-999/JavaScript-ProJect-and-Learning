@@ -1,1 +1,0 @@
-this project example for ConstructorFunction preparation
